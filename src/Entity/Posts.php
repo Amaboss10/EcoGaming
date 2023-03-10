@@ -77,12 +77,12 @@ class Posts
         return $this;
     }
 
-    public function getCreatedId(): ?User
+    public function getCreated_Id(): ?User
     {
         return $this->created_id;
     }
 
-    public function setCreatedId(?User $created_id): self
+    public function setCreated_Id(?User $created_id): self
     {
         $this->created_id = $created_id;
 
@@ -92,7 +92,7 @@ class Posts
     /**
      * @return Collection<int, Comments>
      */
-    public function getCommentPost(): Collection
+    public function getComments(): Collection
     {
         return $this->CommentPost;
     }

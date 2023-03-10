@@ -52,7 +52,7 @@ class Comments
         return $this;
     }
 
-    public function getUserId(): ?User
+    public function getUser(): ?User
     {
         return $this->user_id;
     }
