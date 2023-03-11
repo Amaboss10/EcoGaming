@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}UEL316 - Actualité{% endblock %}
+{% block title %}EcoGaming Forum{% endblock %}
 
 {% block body %}
 
     {% if post is empty %}
-    <p>Actualité non trouvée avec cet ID.</p>
+    <p>Post non existant.</p>
     {% else %}
         <div class="container w-100">
             <div class="row justify-content-around">
@@ -22,7 +22,7 @@
                     </div>
 
                 <div class="card text-left w-100 mt-4 p-0">
-                    <div class="card-header">Commentaires ({{ post.comments.count }})</div>
+                    <div class="card-header">Réponses ({{ post.comments.count }})</div>
                         <div class="card-body">
                     {% for comment in post.comments %}
                         <h6 class="card-title text-muted pb-0 mb-0 mt-2"><b class="fs-4">{{ comment.text }}</b> de {{ comment.user.name }}</h6>
@@ -33,7 +33,7 @@
 
 
                 <div class="card text-center w-100 mt-4 p-0 mb-4">
-                    <div class="card-header">Ajouter un commentaire</div>
+                    <div class="card-header">Repondre</div>
                     <div class="card-body">
                     {% if user %}
                         {{ form_start(commentForm, {'action': path('add_comment', {'id': post.id})}) }}
