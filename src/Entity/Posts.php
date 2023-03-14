@@ -7,6 +7,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use DateTimeInterface;
+
 
 #[ORM\Entity(repositoryClass: PostsRepository::class)]
 class Posts
@@ -25,6 +27,9 @@ class Posts
     #[ORM\Column(length: 255)]
     private ?string $content = null;
 
+	#[ORM\Column(type: 'datetime')]
+	private ?DateTimeInterface $datePublication = null;
+	
     #[ORM\ManyToOne(inversedBy: 'UserPost')]
     private ?User $created_id = null;
 
@@ -73,6 +78,17 @@ class Posts
     public function setContent(string $content): self
     {
         $this->content = $content;
+
+        return $this;
+    }
+	 public function getDatePublication(): ?DateTimeInterface
+    {
+        return $this->datePublication;
+    }
+
+    public function setDatePublication(?DateTimeInterface $datePublication): self
+    {
+        $this->datePublication = $datePublication;
 
         return $this;
     }

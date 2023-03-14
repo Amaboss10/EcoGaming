@@ -21,7 +21,7 @@
                                 <p class="card-text">{{ post.content }}</p>
                                </a>
                             </div>
-                            <div class="card-footer text-muted">Publié par {{ post.created_id.name }}</div>
+                            <div class="card-footer text-muted">Publié par {{ post.created_id.name }} le  {{post.datePublication|date('Y-m-d')}} </div>
                         </div>
                     {% endfor %}
 
