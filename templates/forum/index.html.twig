@@ -2,34 +2,25 @@
 
 {% block title %}EcoGaming Forum{% endblock %}
 
+
 {% block body %}
-
+    <div class="post">
     {% if post is empty %}
-    <p>Post non existant.</p>
+    <div class="nopost"> <p>Post non existant.</p></div>
     {% else %}
-        <div class="container w-100">
-            <div class="row justify-content-around">
-
-                    <div class="card text-center w-100 mt-4 p-0">
-                        <div class="card-header">{{ post.name }}</div>
-                            <div class="card-body">
-
-                                <h6 class="card-title text-muted">{{ post.description }}</h6>
-                                <p class="card-text">{{ post.content }}</p>
-
-                            </div>
-                        <div class="card-footer text-muted">Créé par {{ post.created_id.name }} le </div>
-                    </div>
-
-                <div class="card text-left w-100 mt-4 p-0">
-                    <div class="card-header">Réponses ({{ post.comments.count }})</div>
-                        <div class="card-body">
+	<div class="postcontent">
+        <h1>{{ post.name }}</h1>
+        <h6>{{ post.description }}</h6>
+        <p>{{ post.content }}</p>
+        <h2>Créé par {{ post.created_id.name }} le </h2>
+    </div>
+	
+        <div class="Réponses">Réponses <h1>({{ post.comments.count }})</h1></div>
                     {% for comment in post.comments %}
-                        <h6 class="card-title text-muted pb-0 mb-0 mt-2"><b class="fs-4">{{ comment.text }}</b> de {{ comment.user.name }}</h6>
-            
+                        <h2>{{ comment.text }}</h2><h3> de {{ comment.user.name }}</h3>
                     {% endfor %}
-                    </div>
-                </div>
+        </div>
+</div>
 
 
                 <div class="card text-center w-100 mt-4 p-0 mb-4">

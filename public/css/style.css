@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+}
+
+/*menu*/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  padding: 20px;
+  margin: 0;
+}
+
+.navbar img {
+  width: 70px; 
+  height: auto;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  border: 10px solid transparent;
+}
+
+nav .adiv a {
+  color: white;
+  font-size: 24px;
+  margin: 0 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 5px solid transparent;
+  display: inline-block;
+  padding: 10px 10px; 
+}
+
+nav .adiv a:hover {
+  color: #4CAF50;
+  background-color: white; 
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  border-color: #4CAF50;
+}
+
+
+/*homepage*/
+
+.homepagediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set height to fill entire viewport */
+}
+
+.homepagediv h1 {
+  font-size: 4rem; /* Adjust font size as needed */
+  text-align: center;
+}
+
+/*post*/
+
+.post {
+  margin: auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.postcontent {
+  margin-bottom: 20px;
+}
+
+.postcontent h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.postcontent h6 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.postcontent p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.postcontent h2 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.Réponses {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.Réponses h1 {
+  font-size: 36px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.comment h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/*forum*/
+
+.forum {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #888888;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.forum h1 {
+    color: #008000;
+}
+
+.forum a {
+    color: #008000;
+    text-decoration: none;
+}
+
+.forum a:hover {
+    text-decoration: underline;
+}

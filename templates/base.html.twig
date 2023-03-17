@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}EcoGaming{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
+		 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
@@ -14,15 +15,16 @@
         {% endblock %}
     </head>
     <body>
-		<nav>
-		<a href="/" >EcoGaming</a>
-		<a href="/">Section</a>
-		<a href="/">Informations</a>
-		<a href="/forum">Forum</a>
-		<a href="/login">S'identifier</a>
-		</nav>
-		
-		
+		<div class="navbar">
+  <img src="{{ asset('img/ecogaming.png') }}" alt="Logo">
+  <nav>
+    <div class="adiv"><a href="/">EcoGaming</a></div>
+    <div class="adiv"><a href="/">Section</a></div>
+    <div class="adiv"><a href="/">Informations</a></div>
+    <div class="adiv"><a href="/forum">Forum</a></div>
+    <div class="adiv"><a href="/login">S'identifier</a></div>
+  </nav>
+</div>
 		
 	 {% block body %}{% endblock %}
     </body>
