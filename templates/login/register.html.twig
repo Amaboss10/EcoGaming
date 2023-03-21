@@ -10,7 +10,7 @@
         {{ form_start(registrationForm) }}
         <div class="form-group pb-2">
             <label>Nom d'utilisateur</label>
-            {{ form_widget(registrationForm.username) }}
+            {{ form_widget(registrationForm.name) }}
         </div>
 
         <div class="form-group pb-2">
@@ -21,11 +21,6 @@
         <div class="form-group pb-2">
             <label>Prénom</label>
             {{ form_widget(registrationForm.firstname) }}
-        </div>
-
-        <div class="form-group pb-2">
-            <label>Nom</label>
-            {{ form_widget(registrationForm.lastname) }}
         </div>
 
         <div class="form-group pb-2">

@@ -95,7 +95,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->username;
+        return (string) $this->name;
     }
 
     /**
@@ -153,7 +153,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         if (!$this->UserPost->contains($userPost)) {
             $this->UserPost->add($userPost);
-            $userPost->setCreatedId($this);
         }
 
         return $this;
@@ -161,12 +160,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function removeUserPost(Posts $userPost): self
     {
-        if ($this->UserPost->removeElement($userPost)) {
-            // set the owning side to null (unless already changed)
-            if ($userPost->getCreatedId() === $this) {
-                $userPost->setCreatedId(null);
-            }
-        }
 
         return $this;
     }
@@ -191,13 +184,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function removeUserComment(Comments $userComment): self
     {
-        if ($this->UserComment->removeElement($userComment)) {
-            // set the owning side to null (unless already changed)
-            if ($userComment->getUserId() === $this) {
-                $userComment->setUserId(null);
-            }
-        }
-
         return $this;
     }
 }
