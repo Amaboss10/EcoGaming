@@ -4,6 +4,9 @@ namespace App\Controller\Admin;
 
 use App\Entity\Comments;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class CommentsCrudController extends AbstractCrudController
 {
@@ -12,14 +15,12 @@ class CommentsCrudController extends AbstractCrudController
         return Comments::class;
     }
 
-    /*
-    public function configureFields(string $pageName): iterable
-    {
+    public function configureFields(string $pageName): iterable {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            IdField::new('id')->hideOnForm(),
+            TextField::new('text')->setLabel('Texte'),
+            AssociationField::new('post_id')->setLabel('Post'),
+            //AssociationField::new('user_id')->setLabel('Créateur du commentaire')
         ];
     }
-    */
 }

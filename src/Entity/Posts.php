@@ -31,13 +31,16 @@ class Posts
 	private ?DateTimeInterface $datePublication = null;
 	
     #[ORM\ManyToOne(inversedBy: 'UserPost')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?User $created_id = null;
 
     #[ORM\OneToMany(mappedBy: 'post_id', targetEntity: Comments::class)]
+    #[ORM\JoinColumn(nullable: false)]
     private Collection $CommentPost;
 
     public function __construct()
     {
+        $this->datePublication = new \DateTime();
         $this->CommentPost = new ArrayCollection();
     }
 
@@ -133,5 +136,10 @@ class Posts
         }
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->getName();
     }
 }

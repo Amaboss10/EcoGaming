@@ -18,9 +18,11 @@ class Comments
     private ?string $text = null;
 
     #[ORM\ManyToOne(inversedBy: 'CommentPost')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Posts $post_id = null;
 
     #[ORM\ManyToOne(inversedBy: 'UserComment')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?User $user_id = null;
 
     public function getId(): ?int
@@ -62,5 +64,10 @@ class Comments
         $this->user_id = $user_id;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->getText();
     }
 }

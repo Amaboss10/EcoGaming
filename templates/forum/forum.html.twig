@@ -15,7 +15,7 @@
 				<a href={{ path('app_forumpost', {'id':post.id})}} > <h2>{{ post.name }}</h2>  </a>
                     <h3>{{ post.description }}</h3>
                     <p class="card-text">{{ post.content }}</p>
-					<h4>Publié par {{ post.created_id.name }} le  {{post.datePublication|date('Y-m-d')}} </h4>
+					<h4>Publié {#par {{ post.created_id.name }}  #} le  {{post.datePublication|date('Y-m-d')}} </h4>
             {% endfor %}
 		</div>
     </div>

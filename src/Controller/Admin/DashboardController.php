@@ -2,9 +2,9 @@
 
 namespace App\Controller\Admin;
 
-use app\entity\User;
-use app\entity\Comments;
-use app\entity\Posts;
+use App\Entity\User;
+use App\Entity\Comments;
+use App\Entity\Posts;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -36,7 +36,8 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Commentaires', 'fas fa-list', Comments::class),
             MenuItem::linkToCrud('Posts', 'fas fa-list', Posts::class),
 
-            MenuItem::linkToLogout('Déconnexion', 'fa fa-fa fa-sign-out'),
+            MenuItem::linkToLogout('Déconnexion', 'fa fa-exit'),
+            //MenuItem::linkToLogout('Déconnexion', 'fa fa-fa fa-sign-out'),
         ];
     }
 
