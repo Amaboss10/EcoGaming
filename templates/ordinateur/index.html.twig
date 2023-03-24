@@ -1,20 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SectionController!{% endblock %}
+{% block title %}Ordinateur{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div class="ordinateur">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/src/Controller/SectionController.php'|file_link(0) }}">src/Controller/SectionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/templates/section/index.html.twig'|file_link(0) }}">templates/section/index.html.twig</a></code></li>
-    </ul>
+<div class="titreo"><h1>Ordinateur</h1></div>
+
+<div class="menuo">
+	<nav>
+		<div class="ordimenu"><a href="#informationo">Information</a></div>
+		<div class="ordimenu"><a href="#creationo">Creation</a></div>
+		<div class="ordimenu"><a href="#futuro">Recyclage</a></div>
+		<div class="ordimenu"><a href="#autreo">Autre</a></div>
+	</nav>
 </div>
+
+<div class="informationo" id="informationo">
+	<h1>Information Générale</h1>
+	<p>Lorem Ipsum</p>
+</div>
+
+
+<div class="creationo" id="informationo">
+	<h1>La création d'un Ordinateur</h1>
+	
+	<div class="portableo">
+		<h2>La creation</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+
+</div>
+
+<div class="futuro" id="futuro">
+
+	<h1>Recyclage d'un ordinateur</h1>
+	
+	<div class="portableo">
+		<h2>Le recyclage</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+
+	
+</div>
+
+<div class="autreo" id="autreo">
+<h1>Autre informations pertinentes sur les ordinateurs</h1>
+<p>Lorem Ipsum</p>
+</div>
+
+
+
+</div>
+
+
 {% endblock %}

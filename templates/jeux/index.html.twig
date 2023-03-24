@@ -1,20 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SectionController!{% endblock %}
+{% block title %}Jeux Vidéo{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/src/Controller/SectionController.php'|file_link(0) }}">src/Controller/SectionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/templates/section/index.html.twig'|file_link(0) }}">templates/section/index.html.twig</a></code></li>
-    </ul>
+<div class="jeux">
+
+<div class="titrej"><h1>Jeux Vidéo</h1></div>
+
+<div class="menuj">
+	<nav>
+		<div class="jeuxmenu"><a href="#informationj">Information</a></div>
+		<div class="jeuxmenu"><a href="#creationj">Creation</a></div>
+		<div class="jeuxmenu"><a href="#futurj">Recyclage</a></div>
+		<div class="jeuxmenu"><a href="#autrej">Autre</a></div>
+	</nav>
 </div>
+
+<div class="informationj" id="informationj">
+	<h1>Information Générale</h1>
+	<p>Lorem Ipsum</p>
+</div>
+
+
+<div class="creationj" id="informationj">
+	<h1>La création d'un jeux vidéo</h1>
+	
+	<div class="physiquej">
+		<h2>Physique</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+	
+	<div class="enlignej">
+		<h2>En ligne</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+</div>
+
+<div class="futurj" id="futurj">
+
+	<h1>Recyclage d'un jeux vidéo</h1>
+	
+	<div class="physiquej">
+		<h2>Physique</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+	
+	<div class="enlignej">
+		<h2>En ligne</h2>
+		<p>Lorem Ipsum</p>
+	</div>
+	
+</div>
+
+<div class="autrej" id="autrej">
+<h1>Autre informations pertinentes sur les jeux vidéo</h1>
+<p>Lorem Ipsum</p>
+</div>
+
+
+
+</div>
+
+
+
 {% endblock %}

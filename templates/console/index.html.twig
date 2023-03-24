@@ -1,20 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SectionController!{% endblock %}
+{% block title %}Console{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="console">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div class="titrec"><h1>Console</h1></div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/src/Controller/SectionController.php'|file_link(0) }}">src/Controller/SectionController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/etudiant/Documents/Mes_UEs/UE 304/EcoGaming/templates/section/index.html.twig'|file_link(0) }}">templates/section/index.html.twig</a></code></li>
-    </ul>
+<div class="menuc">
+	<nav>
+		<div class="consolemenu"><a href="#informationc">Information</a></div>
+		<div class="consolemenu"><a href="#creationc">Creation</a></div>
+		<div class="consolemenu"><a href="#futurc">Recyclage</a></div>
+		<div class="consolemenu"><a href="#autrec">Autre</a></div>
+	</nav>
 </div>
+
+<div class="informationc" id="informationc">
+	<h1>Information Générale</h1>
+	<p>Lorem Ipsum</p>
+</div>
+
+
+<div class="creationc" id="informationc">
+	<h1>La création d'une Console</h1>
+	<p>Lorem Ipsum</p>
+
+</div>
+
+<div class="futurc" id="futurc">
+
+	<h1>Recyclage d'une console</h1>
+		<p>Lorem Ipsum</p>
+
+</div>
+
+<div class="autrec" id="autrec">
+<h1>Autre informations pertinentes sur les consoles</h1>
+<p>Lorem Ipsum</p>
+</div>
+
+
+
+</div>
+
 {% endblock %}
