@@ -13,6 +13,7 @@ class AutreController extends AbstractController
     {
         return $this->render('autre/index.html.twig', [
             'controller_name' => 'AutreController',
+            'user' => $this->getUser()
         ]);
     }
 

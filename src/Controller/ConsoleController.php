@@ -13,6 +13,7 @@ class ConsoleController extends AbstractController
     {
         return $this->render('console/index.html.twig', [
             'controller_name' => 'ConsoleController',
+            'user' => $this->getUser()
         ]);
     }
 

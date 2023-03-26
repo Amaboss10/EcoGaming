@@ -13,6 +13,7 @@ class OrdinateurController extends AbstractController
     {
         return $this->render('ordinateur/index.html.twig', [
             'controller_name' => 'OrdinateurController',
+            'user' => $this->getUser()
         ]);
     }
 

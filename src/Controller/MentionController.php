@@ -13,6 +13,7 @@ class MentionController extends AbstractController
     {
         return $this->render('mention/index.html.twig', [
             'controller_name' => 'MentionController',
+            'user' => $this->getUser()
         ]);
     }
 

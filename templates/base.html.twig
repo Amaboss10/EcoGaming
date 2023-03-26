@@ -15,15 +15,20 @@
     </head>
     <body>
 		<div class="navbar">
-  <img src="{{ asset('img/ecogaming.png') }}" alt="Logo">
-  <nav>
-    <div class="adiv"><a href="/">EcoGaming</a></div>
-    <div class="adiv"><a href="/section">Section</a></div>
-    <div class="adiv"><a href="/information">Informations</a></div>
-    <div class="adiv"><a href="/forum">Forum</a></div>
-    <div class="adiv"><a href="/login">S'identifier</a></div>
-  </nav>
-</div>
+            <img src="{{ asset('img/ecogaming.png') }}" alt="Logo">
+            <nav>
+                <div class="adiv"><a href="/">EcoGaming</a></div>
+                <div class="adiv"><a href="/forum">Forum</a></div>
+                {% if user %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <div class="adiv"><a href="/admin">Page admin</a></div>
+                    {% endif %}
+                    <div class="adiv"><a href="/logout">{{ user.name }} : se déconnecter</a></div>
+                {% else %}
+                    <div class="adiv"><a href="/login">S'identifier</a></div>
+                {% endif %}
+            </nav>
+        </div>
 		
 	 {% block body %}
          {% block javascripts %}
@@ -41,7 +46,7 @@
         <footer class="footer bg-dark py-3">
             <nav class="d-flex justify-content-center">
                 <div class="adiv mt-0"><a href="/contact">Contact</a></div>
-				<div class="adiv mt-0"><a href="/mention">Mention Legales</a></div>
+				<div class="adiv mt-0"><a href="/mention">Mentions légales</a></div>
                 <span class="text-muted">© 2023 EcoGaming</span>
             </nav>
         </footer>
