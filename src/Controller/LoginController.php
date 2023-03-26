@@ -17,13 +17,6 @@ use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 class LoginController extends AbstractController
 {
     #[Route('/login', name: 'app_login')]
-   /* public function index(): Response
-    {
-        return $this->render('login/index.html.twig', [
-            'controller_name' => 'LoginController',
-        ]);
-    }*/
-
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         if ($this->getUser()) {
@@ -37,7 +30,6 @@ class LoginController extends AbstractController
 
         return $this->render('login/index.html.twig', [
             'last_username' => $lastUsername, 'error' => $error,
-            'user' => $this->getUser()
         ]);
     }
 
@@ -74,8 +66,7 @@ class LoginController extends AbstractController
         }
 
         return $this->render('login/register.html.twig', [
-            'registrationForm' => $form->createView(),
-            'user' => $this->getUser()
+            'registrationForm' => $form->createView()
         ]);
     }
 }

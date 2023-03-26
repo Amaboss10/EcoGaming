@@ -8,18 +8,12 @@
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'login') }}</div>
         {% endif %}
 
-        {% if app.user %}
-            <div class="alert alert-danger">
-                You are already logged in as <b>{{ app.user.userIdentifier }}</b>, <a href="{{ path('app_logout') }}">Logout</a>
-            </div>
-        {% endif %}
-
         <div class="row w-25 m-auto mt-4">
             <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
 
             <div class="form-outline mb-4">
-                <label class="form-label" for="inputUsername">Nom d'utilisateur</label>
-                <input type="text" name="username" value="{{ last_username }}" id="inputUsername" class="form-control" autocomplete="username" required autofocus />
+                <label class="form-label" for="inputName">Nom d'utilisateur</label>
+                <input type="text" name="name" value="{{ last_username }}" id="inputName" class="form-control" autocomplete="name" required autofocus />
             </div>
 
             <div class="form-outline mb-4">
