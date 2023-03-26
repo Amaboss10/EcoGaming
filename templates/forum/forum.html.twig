@@ -5,6 +5,21 @@
 {% block body %}
 
 <div class="forum">
+		<div class="card text-center w-100 mt-4 p-0 mb-4">
+                    <div class="card-header">Ecrire un post</div>
+                    <div class="card-body">
+                    {% if user %}
+                        {{ form_start(PostForm, {'action': path('app_forumadd')}) }}
+                         
+                        {{ form_end(PostForm) }}
+						   <button type="submit">Envoyer</button>
+                    {% else %}
+                        <h6 class="card-title text-muted">Tu dois être connecté(e) pour ça!</h6>
+                    {% endif %}
+                    </div>
+                </div>
+				
+				
     {% if posts is empty %}
    <div class="forumempty"> <h1>Aucun poste n'a été trouvé.</41></div>
     {% else %}
@@ -21,4 +36,5 @@
     </div>
 
     {% endif %}
+</div>
 {% endblock %}
