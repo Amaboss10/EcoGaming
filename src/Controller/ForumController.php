@@ -42,7 +42,7 @@ class ForumController extends AbstractController
 	 #[Route('/forum/post/add', name: 'app_forumadd')]
 	public function addPost(Request $request, EntityManagerInterface $entityManager): Response
     {
-         $post = new Posts();
+        $post = new Posts();
         $post->setCreated_Id($this->getUser());
 
         $postForm = $this->createForm(PostType::class, $post);

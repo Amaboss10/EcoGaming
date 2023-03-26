@@ -10,9 +10,8 @@
                     <div class="card-body">
                     {% if user %}
                         {{ form_start(PostForm, {'action': path('app_forumadd')}) }}
-                         
+                        <button type="submit">Envoyer</button>
                         {{ form_end(PostForm) }}
-						   <button type="submit">Envoyer</button>
                     {% else %}
                         <h6 class="card-title text-muted">Tu dois être connecté(e) pour ça!</h6>
                     {% endif %}
@@ -21,7 +20,7 @@
 				
 				
     {% if posts is empty %}
-   <div class="forumempty"> <h1>Aucun poste n'a été trouvé.</41></div>
+   <div class="forumempty"> <h1>Aucun poste n'a été trouvé.</h1></div>
     {% else %}
     <div class="forumcontent">
         <h1>Forum</h1>
