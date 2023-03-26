@@ -69,11 +69,8 @@ class LoginController extends AbstractController
 
         return $this->render('login/register.html.twig', [
             'registrationForm' => $form->createView(),
-<<<<<<< HEAD
+
 			'user' => $this->getUser()
-=======
-            'user' => $this->getUser()
->>>>>>> d5cc094cb7beb4ff2d3d763215d262914835ccda
         ]);
     }
 }
