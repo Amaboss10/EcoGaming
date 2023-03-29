@@ -5,46 +5,47 @@
 {% block body %}
 
 <body>
-<div class="homepagediv"><h1>EcoGaming</h1></div>
+    <div class="homepagediv">
+        <h1>EcoGaming</h1>
+        <section>
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="card m-2" style="width: 18rem;">
+                  <img src="{{ asset('img/cartouche.png') }}" class="card-img-top p-4 homepagediv-img" alt="Cartouche de jeu">
+                  <div class="card-body">
+                      <h5 class="card-title">Les jeux-vidéo</h5>
+                      <p class="card-text">Information sur les jeux-vidéo</p>
+                      <a class="btn btn-primary" href={{ path("app_jeux") }}>Voir plus</a>
+                  </div>
+                </div>
 
-<div class="homepagesection">
-<section>
-  <div class="container">
-      <div class="col">
-	  <div class="row">
-        <h2>Les Jeux Vidéo</h2>
-        <img src="img/cartouche.png">
-		</div>
-        <p>Information sur les jeux vidéo</p>
-        <a href={{ path("app_jeux") }} class="btn">Voir</a>
-      </div>
-      <div class="col">
-	   <div class="row">
-        <h2>Les Consoles</h2>
-        <img src="img/console.png">
-		</div>
-        <p>Information sur les consoles</p>
-        <a href={{ path("app_console") }} class="btn">Voir</a>
-      </div>
-      <div class="col">
-	   <div class="row">
-        <h2>Les Ordinateurs</h2>
-        <img src="img/computer.png">
-		</div>
-        <p>Information sur les ordinateurs</p>
-        <a href={{ path("app_ordinateur") }} class="btn">Voir</a>
-      </div>
-      <div class="col">
-	   <div class="row">
-        <h2>Autre</h2>
-        <img src="img/autre.png">
-		</div>
-        <p>Autre informations pertinentes</p>
-        <a href={{ path("app_autre") }} class="btn">Voir</a>
-      </div>
-  </div>
-</section>
-</div>
+                <div class="card m-2" style="width: 18rem;">
+                  <img src="{{ asset('img/computer.png') }}" class="card-img-top p-4 homepagediv-img" alt="Ordinateur">
+                  <div class="card-body">
+                      <h5 class="card-title">Les ordinateurs</h5>
+                      <p class="card-text">Information sur les ordinateurs</p>
+                      <a class="btn btn-primary" href={{ path("app_ordinateur") }}>Voir plus</a>
+                  </div>
+                </div>
 
+                <div class="card m-2" style="width: 18rem;">
+                  <img src="{{ asset('img/console.png') }}" class="card-img-top p-4 homepagediv-img" style="width: 80%;" alt="Console de jeu">
+                  <div class="card-body">
+                      <h5 class="card-title">Les consoles</h5>
+                      <p class="card-text">Information sur les consoles</p>
+                      <a class="btn btn-primary" href={{ path("app_console") }}>Voir plus</a>
+                  </div>
+                </div>
+
+                <div class="card m-2" style="width: 18rem;">
+                  <img src="{{ asset('img/autre.png') }}" class="card-img-top p-4 homepagediv-img" alt="Autre">
+                  <div class="card-body">
+                      <h5 class="card-title">Autre</h5>
+                      <p class="card-text">Autre informations pertinentes</p>
+                      <a class="btn btn-primary" href={{ path("app_autre") }}>Voir plus</a>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 {% endblock %}

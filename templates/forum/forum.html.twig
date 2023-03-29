@@ -4,33 +4,50 @@
 
 {% block body %}
 
+
 <div class="forum">
-		<div class="card text-center w-100 mt-4 p-0 mb-4">
-                    <div class="card-header">Ecrire un post</div>
-                    <div class="card-body">
-                    {% if user %}
-                        {{ form_start(PostForm, {'action': path('app_forumadd')}) }}
-                        <button type="submit">Envoyer</button>
-                        {{ form_end(PostForm) }}
-                    {% else %}
-                        <h6 class="card-title text-muted">Tu dois être connecté(e) pour ça!</h6>
-                    {% endif %}
-                    </div>
-                </div>
+    <div class="card text-center w-100 mt-4 p-0 mb-4">
+        <div class="card-header">Ecrire un post</div>
+            <div class="card-body">
+            {% if user %}
+                {{ form_start(PostForm, {'action': path('app_forumadd')}) }}
+                <button type="submit">Envoyer</button>
+                {{ form_end(PostForm) }}
+            {% else %}
+                <h6 class="card-title text-muted">Tu dois être connecté(e) pour ça!</h6>
+            {% endif %}
+            </div>
+        </div>
 				
-				
+
     {% if posts is empty %}
-   <div class="forumempty"> <h1>Aucun poste n'a été trouvé.</h1></div>
+        <div class="forumempty"> <h1>Aucun post n'a été trouvé.</h1></div>
     {% else %}
-    <div class="forumcontent">
+
         <h1>Forum</h1>
-        <div class="foruminfo">
+        <div class="list-group">
+
             {% for post in posts %}
-				<a href={{ path('app_forumpost', {'id':post.id})}} > <h2>{{ post.name }}</h2>  </a>
-                    <h3>{{ post.description }}</h3>
-                    <p class="card-text">{{ post.content }}</p>
-					<h4>Publié {#par {{ post.created_id.name }}  #} le  {{post.datePublication|date('Y-m-d')}} </h4>
+                <a href="{{ path('app_forumpost', {'id':post.id})}}" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ post.name }}</h5>
+                        <small>Publié par {{ post.created_id.name }} le  {{post.datePublication|date('d/m/Y')}}</small>
+                    </div>
+                    <p class="mb-1">{{ post.description }}</p>
+                </a>
             {% endfor %}
+
+
+        </div>
+
+
+
+
+
+    <div class="forumcontent">
+
+        <div class="foruminfo">
+
 		</div>
     </div>
 
